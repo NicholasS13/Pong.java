@@ -53,7 +53,7 @@ public class PongGame extends Application implements EventHandler<InputEvent>
 			if((ball.getXpos()<=player1.getXpos()+20&&ball.getXpos()>player1.getXpos())||(ball.getXpos()<=player2.getXpos()+20&&ball.getXpos()>player2.getXpos()))
 				if((ball.getYpos()>=player1.getYpos()&&ball.getYpos()<player1.getYpos()+120)||(ball.getYpos()>=player2.getYpos()&&ball.getYpos()<player2.getYpos()+120)){
 					ball.changeIncrimentx();
-					ball.changeIncrimenty();
+					//ball.changeIncrimenty();
 				}
 			ball.move();
 			gc.clearRect(0,0,canvas.getWidth(),canvas.getHeight());
@@ -70,6 +70,8 @@ public class PongGame extends Application implements EventHandler<InputEvent>
 			gc.fillRect(canvas.getWidth()-5,0,5,canvas.getHeight());
 			gc.fillRect(0,canvas.getHeight()-5,canvas.getWidth(),5);
 
+			ball.getP1Score();
+			ball.getP2Score();
 		}
 	}
 
