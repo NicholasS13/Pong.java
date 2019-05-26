@@ -61,7 +61,15 @@ public class PongGame extends Application implements EventHandler<InputEvent>
 
 			gc.fillRect(player2.getXpos(),player2.getYpos(),20,120);//paddle 2
 
-			gc.fillRect(ball.getXpos(),ball.getYpos(),20,20);
+			gc.fillRect(ball.getXpos(),ball.getYpos(),20,20);//ball
+
+			//board styling
+			gc.fillRect(canvas.getWidth()/2,0,3,canvas.getHeight());//center line
+			gc.fillRect(0,0,canvas.getWidth(),5);
+			gc.fillRect(0,0,5,canvas.getHeight());
+			gc.fillRect(canvas.getWidth()-5,0,5,canvas.getHeight());
+			gc.fillRect(0,canvas.getHeight()-5,canvas.getWidth(),5);
+
 		}
 	}
 
